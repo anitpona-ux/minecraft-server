@@ -1,12 +1,17 @@
 #!/bin/bash
-if [ ! -f "paper-1.20.1.jar" ]; then
-  echo "Сервер не настроен. Запуск автоматической первоначальной установки..."
-  bash setup.sh
-fi
+echo "=========================================================="
+echo " Запуск Minecraft Fabric 1.20.1 + Pehkui + CPM (5 ГБ RAM)"
+echo "=========================================================="
 
-echo "=========================================================="
-echo " Запуск Minecraft Paper 1.20.1 с Aikar Flags (5 ГБ RAM)"
-echo "=========================================================="
+# Копируем измерения Незера и Энда в формат Vanilla/Fabric при первом запуске
+if [ -d "world_nether/DIM-1" ] && [ ! -d "world/DIM-1" ]; then
+  echo "[MIGRATION] Копирование Nether в формат Fabric..."
+  cp -r world_nether/DIM-1 world/
+fi
+if [ -d "world_the_end/DIM1" ] && [ ! -d "world/DIM1" ]; then
+  echo "[MIGRATION] Копирование The End в формат Fabric..."
+  cp -r world_the_end/DIM1 world/
+fi
 
 exec java -Xms3G -Xmx5G \
   -XX:+UseG1GC \
@@ -26,4 +31,4 @@ exec java -Xms3G -Xmx5G \
   -XX:SurvivorRatio=32 \
   -XX:+PerfDisableSharedMem \
   -XX:MaxTenuringThreshold=1 \
-  -jar paper-1.20.1.jar nogui
+  -jar fabric-server-launch.jar nogui

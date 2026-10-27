@@ -15,17 +15,21 @@ elif command -v apt-get >/dev/null 2>&1; then
 fi
 
 echo "[2/5] Создание структуры папок..."
-mkdir -p plugins config
+mkdir -p mods config
 
-echo "[3/5] Скачивание Paper 1.20.1 (Build 196)..."
-if [ ! -f "paper-1.20.1.jar" ]; then
-  curl -fsSL -o paper-1.20.1.jar "https://fill-data.papermc.io/v1/objects/234a9b32098100c6fc116664d64e36ccdb58b5b649af0f80bcccb08b0255eaea/paper-1.20.1-196.jar"
+echo "[3/5] Скачивание Fabric Server 1.20.1 (Loader 0.16.10)..."
+if [ ! -f "fabric-server-launch.jar" ]; then
+  curl -fsSL -o fabric-server-launch.jar "https://meta.fabricmc.net/v2/versions/loader/1.20.1/0.16.10/1.0.1/server/jar"
 fi
 
-echo "[4/5] Скачивание плагинов Simple Voice Chat, Custom Player Models и Chunky..."
-curl -fsSL -o plugins/voicechat-bukkit.jar "https://cdn.modrinth.com/data/9eGKb6K1/versions/CxMI5WBR/voicechat-bukkit-2.6.26.jar"
-curl -fsSL -o plugins/CustomPlayerModels-Bukkit.jar "https://cdn.modrinth.com/data/h1E7sQNL/versions/35JZGBue/CustomPlayerModels-Bukkit-0.6.27a.jar"
-curl -fsSL -o plugins/Chunky-Bukkit.jar "https://cdn.modrinth.com/data/fALzjamp/versions/P3y2MXnd/Chunky-Bukkit-1.4.40.jar"
+echo "[4/5] Скачивание модов Fabric (Fabric API, Pehkui, CPM, VoiceChat, Lithium, FerriteCore)..."
+curl -fsSL -o mods/fabric-api.jar "https://cdn.modrinth.com/data/P7dR8mSH/versions/rvI2dfzR/fabric-api-0.92.12%2B1.20.1.jar"
+curl -fsSL -o mods/Pehkui.jar "https://cdn.modrinth.com/data/t5W7Jfwy/versions/6fzxx6SC/Pehkui-3.8.3%2B1.14.4-1.21.jar"
+curl -fsSL -o mods/CustomPlayerModels.jar "https://cdn.modrinth.com/data/h1E7sQNL/versions/3XedKRav/CustomPlayerModels-Fabric-1.20-0.6.27a.jar"
+curl -fsSL -o mods/voicechat.jar "https://cdn.modrinth.com/data/9eGKb6K1/versions/moiHjUsv/voicechat-fabric-1.20.1-2.6.26.jar"
+curl -fsSL -o mods/lithium.jar "https://cdn.modrinth.com/data/gvQqBUqZ/versions/iEcXOkz4/lithium-fabric-mc1.20.1-0.11.4.jar"
+curl -fsSL -o mods/ferritecore.jar "https://cdn.modrinth.com/data/uXXizFIs/versions/unerR5MN/ferritecore-6.0.1-fabric.jar"
+curl -fsSL -o mods/Chunky.jar "https://cdn.modrinth.com/data/fALzjamp/versions/NHWYq9at/Chunky-1.3.146.jar"
 
 echo "[5/5] Скачивание агента туннелирования Playit.gg..."
 if [ ! -f "playit" ]; then
