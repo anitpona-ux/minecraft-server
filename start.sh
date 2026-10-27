@@ -5,10 +5,10 @@ if [ ! -f "paper-1.20.1.jar" ]; then
 fi
 
 echo "=========================================================="
-echo " Запуск Minecraft Paper 1.20.1 с Aikar Flags (6 ГБ RAM)"
+echo " Запуск Minecraft Paper 1.20.1 с Aikar Flags (5 ГБ RAM)"
 echo "=========================================================="
 
-exec java -Xms6G -Xmx6G \
+exec java -Xms3G -Xmx5G \
   -XX:+UseG1GC \
   -XX:+ParallelRefProcEnabled \
   -XX:MaxGCPauseMillis=200 \

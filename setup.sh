@@ -6,8 +6,13 @@ echo "      Minecraft Paper 1.20.1 Auto-Setup Script            "
 echo "=========================================================="
 
 echo "[1/5] Установка Java 17 и утилит..."
-sudo apt-get update -y
-sudo apt-get install -y openjdk-17-jre-headless tmux curl wget
+if command -v apk >/dev/null 2>&1; then
+  sudo apk update
+  sudo apk add --no-cache openjdk17-jre-headless tmux curl wget bash gcompat libstdc++
+elif command -v apt-get >/dev/null 2>&1; then
+  sudo apt-get update -y
+  sudo apt-get install -y openjdk-17-jre-headless tmux curl wget bash
+fi
 
 echo "[2/5] Создание структуры папок..."
 mkdir -p plugins config
