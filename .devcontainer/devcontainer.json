@@ -1,0 +1,23 @@
+{
+  "name": "Minecraft Paper 1.20.1 Server",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "17"
+    }
+  },
+  "forwardPorts": [25565, 24454],
+  "portsAttributes": {
+    "25565": {
+      "label": "Minecraft Game Port",
+      "onAutoForward": "notify",
+      "visibility": "public"
+    },
+    "24454": {
+      "label": "Simple Voice Chat UDP",
+      "onAutoForward": "notify",
+      "visibility": "public"
+    }
+  },
+  "postCreateCommand": "bash setup.sh"
+}

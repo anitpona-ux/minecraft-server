@@ -1,0 +1,23 @@
+chunks:
+  auto-save-interval: 6000
+  max-auto-save-chunks-per-tick: 8
+entities:
+  spawning:
+    despawn-ranges:
+      monster:
+        hard: 96
+        soft: 32
+      creature:
+        hard: 96
+        soft: 32
+      ambient:
+        hard: 64
+        soft: 32
+    per-player-mob-spawns: true
+tick-rates:
+  behavior:
+    villager:
+      validatenearbypoi: 40
+  sensor:
+    villager:
+      secondarypoisensor: 40

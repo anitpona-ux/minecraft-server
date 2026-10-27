@@ -1,0 +1,20 @@
+world-settings:
+  default:
+    view-distance: default
+    simulation-distance: default
+    mob-spawn-range: 4
+    entity-activation-range:
+      animals: 16
+      monsters: 24
+      raiders: 36
+      misc: 8
+      water: 12
+      villagers: 16
+      flying-monsters: 24
+    merge-radius:
+      item: 3.5
+      exp: 4.0
+    ticks-per:
+      hopper-transfer: 8
+      hopper-check: 8
+    hopper-amount: 1
