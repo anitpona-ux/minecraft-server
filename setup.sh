@@ -24,7 +24,7 @@ fi
 
 echo "[4/5] Скачивание плагинов Simple Voice Chat, Custom Player Models и Chunky..."
 curl -fsSL -o plugins/voicechat-bukkit.jar "https://cdn.modrinth.com/data/9eGKb6K1/versions/CxMI5WBR/voicechat-bukkit-2.6.26.jar"
-curl -fsSL -o plugins/CustomPlayerModels-Bukkit.jar "https://cdn.modrinth.com/data/h1E7sQNL/versions/srG0b8oU/CustomPlayerModels-Bukkit-0.6.20a.jar"
+curl -fsSL -o plugins/CustomPlayerModels-Bukkit.jar "https://cdn.modrinth.com/data/h1E7sQNL/versions/35JZGBue/CustomPlayerModels-Bukkit-0.6.27a.jar"
 curl -fsSL -o plugins/Chunky-Bukkit.jar "https://cdn.modrinth.com/data/fALzjamp/versions/P3y2MXnd/Chunky-Bukkit-1.4.40.jar"
 
 echo "[5/5] Скачивание агента туннелирования Playit.gg..."
