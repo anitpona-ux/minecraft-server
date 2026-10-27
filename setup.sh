@@ -28,7 +28,7 @@ curl -fsSL -o plugins/CustomPlayerModels-Bukkit.jar "https://cdn.modrinth.com/da
 
 echo "[5/5] Скачивание агента туннелирования Playit.gg..."
 if [ ! -f "playit" ]; then
-  curl -fsSL -o playit "https://github.com/playit-cloud/playit-agent/releases/latest/download/playit-linux-amd64"
+  curl -fsSL -o playit "https://github.com/playit-cloud/playit-agent/releases/download/v0.15.26/playit-linux-amd64"
   chmod +x playit
 fi
 
