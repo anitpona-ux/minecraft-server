@@ -22,9 +22,10 @@ if [ ! -f "paper-1.20.1.jar" ]; then
   curl -fsSL -o paper-1.20.1.jar "https://fill-data.papermc.io/v1/objects/234a9b32098100c6fc116664d64e36ccdb58b5b649af0f80bcccb08b0255eaea/paper-1.20.1-196.jar"
 fi
 
-echo "[4/5] Скачивание плагинов Simple Voice Chat и Custom Player Models..."
+echo "[4/5] Скачивание плагинов Simple Voice Chat, Custom Player Models и Chunky..."
 curl -fsSL -o plugins/voicechat-bukkit.jar "https://cdn.modrinth.com/data/9eGKb6K1/versions/CxMI5WBR/voicechat-bukkit-2.6.26.jar"
 curl -fsSL -o plugins/CustomPlayerModels-Bukkit.jar "https://cdn.modrinth.com/data/h1E7sQNL/versions/srG0b8oU/CustomPlayerModels-Bukkit-0.6.20a.jar"
+curl -fsSL -o plugins/Chunky-Bukkit.jar "https://cdn.modrinth.com/data/fALzjamp/versions/P3y2MXnd/Chunky-Bukkit-1.4.40.jar"
 
 echo "[5/5] Скачивание агента туннелирования Playit.gg..."
 if [ ! -f "playit" ]; then
